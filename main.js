@@ -39,14 +39,16 @@ $(document).ready(function() {
 
             var zoomObj = 7;
 
-            if (objCountries[indexCountry].area > 100000) {
+            if (objCountries[indexCountry].area > 400000) {
                 zoomObj = 6;
-            } else if (objCountries[indexCountry].area > 250000) {
-                zoomObj = 5;
-            } else if (objCountries[indexCountry].area > 450000) {
-                zoomObj = 4;
-            } else if (objCountries[indexCountry].area < 5000) {
+            } else if (objCountries[indexCountry].area > 200000) {
+                zoomObj = 7;
+            } else if (objCountries[indexCountry].area > 50000) {
+                zoomObj = 8;
+            } else if (objCountries[indexCountry].area > 25000) {
                 zoomObj = 9;
+            } else if (objCountries[indexCountry].area < 10000) {
+                zoomObj = 10;
             }
 
 

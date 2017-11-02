@@ -9,7 +9,6 @@ main {
     display: flex;
     justify-content: center;
     border: 1px solid black;
-    width: calc(100vw - 6em);
     margin: 1em;
     padding: 1em;
     box-shadow: 5px 5px 5px #ccc;
@@ -23,5 +22,4 @@ main {
     display: flex;
     flex-grow: 1;
     height: auto;
-    width: 800px;
 }
