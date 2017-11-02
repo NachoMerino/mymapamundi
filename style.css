@@ -5,9 +5,14 @@
     box-shadow: 10px 10px 5px #ccc;
 }
 
+
 main {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+main,
+#largest,
+#smallest {
     border: 1px solid black;
     margin: 1em;
     padding: 1em;
@@ -15,7 +20,7 @@ main {
 }
 
 #countryFlag {
-    padding:  1.25em 0;
+    padding:  1.25em;
 }
 
 #map {
