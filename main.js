@@ -13,7 +13,6 @@ $(document).ready(function() {
     });
     $('#cmbCountry').on('change', function() {
         var indexCountry = $(this).val();
-
         $('#mainCity').empty();
         $('#countryFlag').empty();
         $('#countryLanguages').empty();
@@ -21,12 +20,11 @@ $(document).ready(function() {
         $.each(objCountries[indexCountry].languages, function(index, language) {
             $('#countryLanguages').append($('<li>', {
                 'data-key': index,
-                html: language.name + '<br>(' + language.nativeName + ')'
+                html: language.name + ' (' + language.nativeName + ')'
             }))
         })
         $('#population').append(`
-          <p>${objCountries[indexCountry].population}</p>
-          <p>${objCountries[indexCountry].area}</p>`)
+          <p>${objCountries[indexCountry].population} ${objCountries[indexCountry].demonym}s</p>`)
         $('#mainCity').append(`
               <h1>${objCountries[indexCountry].capital}</h1>
             `)
@@ -51,21 +49,14 @@ $(document).ready(function() {
                 zoomObj = 10;
             }
 
-
-            console.log(zoomObj)
             var map = new google.maps.Map($('#map')[0], {
                 center: mapCenter,
                 zoom: zoomObj
             });
             var icon = {
                 url: objCountries[indexCountry].flag, // url
-                scaledSize: new google.maps.Size(30, 30), // scaled size
-                origin: new google.maps.Point(0, 0), // origin
-                anchor: new google.maps.Point(0, 0) // anchor
+                scaledSize: new google.maps.Size(35, 25), // scaled size
             };
-
-
-
 
             var objMarker = new google.maps.Marker({
                 position: mapCenter,
