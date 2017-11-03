@@ -13,7 +13,8 @@
                     text: country.name
                 }));
             });
-
+//Search the countries big and small
+/*
             $.each(newObjCountries, function(index, country) {
                 objArea.push(country.area);
             });
@@ -39,7 +40,7 @@
                 newObjCountries.splice(indexSmall, 1);
                 objArea.splice(indexSmall, 1);
             }
-
+*/
         });
 
 
